@@ -118,7 +118,7 @@ public class Employee extends BasePage {
     }
 
     private WebElement buttonDeleteEditItem(int rowNumber, int deleteEdit){
-        String cssPath = ".table > tbody:nth-child(" + rowNumber + ") > tr:nth-child(1) > td:nth-child(9) > button:nth-child(" + deleteEdit +")";
+        String cssPath = ".table > tbody:nth-child(2) > tr:nth-child("+ rowNumber +") > td:nth-child(9) > button:nth-child(" + deleteEdit +")";
         WebElement deleteButton = webDriver.findElement(By.cssSelector(cssPath));
         return deleteButton;
     }

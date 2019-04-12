@@ -5,3 +5,10 @@ Feature: Employee feature
     Given 'Loading' page
 
     And add 'Employee' data
+
+
+  Scenario: Edit employee
+
+    Given 'Loading' page
+
+    And  edit 'Employee' data
