@@ -9,8 +9,13 @@ public class StepsDefinitionPHPtravel {
     private Login login;
     private org.umssdiplo.automationv01.core.managepage.catalogo.clickCatalogo clickCatalogo;
 
-    @Given("^'PHP travel' page is loaded$")
-    public void phpTravelPageIsLoaded() throws Throwable {
+//    @Given("^'PHP travel' page is loaded$")
+//    public void phpTravelPageIsLoaded() throws Throwable {
+//        login = LoadPage.loginPage();
+//    }
+
+    @Given("^'Loading' page$")
+    public void loading() throws Throwable {
         login = LoadPage.loginPage();
     }
 
