@@ -12,3 +12,10 @@ Feature: Employee feature
     Given 'Loading' page
 
     And  edit 'Employee' data
+
+
+  Scenario: Delete employee
+
+    Given 'Loading' page
+
+    And delete 'Employee' data

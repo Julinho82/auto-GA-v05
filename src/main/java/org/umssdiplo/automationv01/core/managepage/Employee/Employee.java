@@ -61,6 +61,13 @@ public class Employee extends BasePage {
 
     }
 
+    public void clickDelEmployee(){
+
+        cancelButton.click();
+    }
+
+
+
     public void fillFirstName(String data){
         firstName.clear();
         firstName.sendKeys(data);

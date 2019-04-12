@@ -37,15 +37,22 @@ public class StepsDefinitionPHPtravel {
     }
 
     private void fillData(){
-        employee.fillFirstName("Julio");
-        employee.fillLastName("Daviu");
-        employee.fillCi("5242252");
+        employee.fillFirstName("Jose Miguel");
+        employee.fillLastName("Velasquez");
+        employee.fillCi("823664");
         employee.fillGender("MALE");
-        employee.fillAddress("Ruiz de Orellana");
-        employee.fillDOB("31/07/1982");
-        employee.fillPhone("70710023");
-        employee.fillEmailField("julio@daviu.com");
+        employee.fillAddress("Sacaba");
+        employee.fillDOB("31/07/1985");
+        employee.fillPhone("65380106");
+        employee.fillEmailField("jose@Miguel.com");
         employee.fillEmployeeType("Employee");
-        employee.fillSalaryField("85555555");
+        employee.fillSalaryField("3500");
+    }
+
+    @And("^delete 'Employee' data$")
+    public void deleteEmployeeData() {
+        employee.clickDeleteEditButton(1,1);
+        fillData();
+        employee.clickDelEmployee();
     }
 }
