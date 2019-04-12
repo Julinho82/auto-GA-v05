@@ -21,4 +21,31 @@ public class StepsDefinitionPHPtravel {
 
 
     }
+
+    @And("^add 'Employee' data$")
+    public void addNewEmployee() throws Throwable{
+        employee.clickAddEmployee();
+        fillData();
+        employee.clickCreateButton();
+    }
+
+    @And("^edit 'Employee' data$")
+    public void EditNewEmployee() throws Throwable{
+        employee.clickDeleteEditButton(1,2);
+        fillData();
+        employee.clickCreateButton();
+    }
+
+    private void fillData(){
+        employee.fillFirstName("Julio");
+        employee.fillLastName("Daviu");
+        employee.fillCi("5242252");
+        employee.fillGender("MALE");
+        employee.fillAddress("Ruiz de Orellana");
+        employee.fillDOB("31/07/1982");
+        employee.fillPhone("70710023");
+        employee.fillEmailField("julio@daviu.com");
+        employee.fillEmployeeType("Employee");
+        employee.fillSalaryField("85555555");
+    }
 }

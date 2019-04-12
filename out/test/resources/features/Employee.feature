@@ -4,4 +4,4 @@ Feature: Employee feature
 
     Given 'Loading' page
 
-    And  'Click' button employee
+    And add 'Employee' data
