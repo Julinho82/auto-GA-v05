@@ -37,16 +37,16 @@ public class StepsDefinitionPHPtravel {
     }
 
     private void fillData(){
-        employee.fillFirstName("Jose Miguel");
-        employee.fillLastName("Velasquez");
-        employee.fillCi("823664");
+        employee.fillFirstName("Juan Miguel");
+        employee.fillLastName("Flores");
+        employee.fillCi("932685");
         employee.fillGender("MALE");
-        employee.fillAddress("Sacaba");
+        employee.fillAddress("Cercado");
         employee.fillDOB("31/07/1985");
         employee.fillPhone("65380106");
-        employee.fillEmailField("jose@Miguel.com");
+        employee.fillEmailField("Juan@Miguel.com");
         employee.fillEmployeeType("Employee");
-        employee.fillSalaryField("3500");
+        employee.fillSalaryField("2500");
     }
 
     @And("^delete 'Employee' data$")
