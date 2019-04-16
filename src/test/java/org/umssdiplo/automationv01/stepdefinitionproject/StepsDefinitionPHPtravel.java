@@ -58,6 +58,7 @@ public class StepsDefinitionPHPtravel {
         employee.clickDelEmployee();
     }
 
+    //Assigment part
     @Given("^Load Assigment Report$")
     public void loadAssigmentReport() {
         assigment=LoadPage.assigment();
@@ -72,5 +73,18 @@ public class StepsDefinitionPHPtravel {
     @And("^click 'Submenu Report'$")
     public void clickSubmenuReport() {
         assigment.clickAssigmentReport();
+    }
+
+    //Assigment employee
+    @Given("^Load 'Assigment Material'$")
+    public void loadAssigmentMaterial() {
+        assigment=LoadPage.assigment();
+    }
+
+    @And("^click 'Menu Assigment Employee'$")
+    public void clickMenuAssigmentEmployee() {
+
+        assigment.clickAssigmentEmployee();
+
     }
 }

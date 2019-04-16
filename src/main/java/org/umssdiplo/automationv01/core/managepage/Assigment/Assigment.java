@@ -22,5 +22,23 @@ public class Assigment extends BasePage {
 
     }
 
+    @FindBy(css = "#ssiga-navbar-collapse > ul > ul > li:nth-child(5) > a")
+    private WebElement menuAssigmentEmployee;
+
+    public void clickAssigmenteEmployee(){
+
+        menuAssigmentEmployee.click();
+    }
+
+    @FindBy(xpath = "//*[@id=\"ssiga-navbar-collapse\"]/ul/ul/li[5]/ul/li[2]/a")
+    private  WebElement subMenuAssigmentEmployee;
+
+    public void clickAssigmentEmployee(){
+
+        subMenuAssigmentEmployee.click();
+    }
+
+
+
 
 }
