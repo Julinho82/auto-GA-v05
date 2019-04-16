@@ -2,14 +2,16 @@ package org.umssdiplo.automationv01.stepdefinitionproject;
 
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
+import org.umssdiplo.automationv01.core.managepage.Assigment.Assigment;
 import org.umssdiplo.automationv01.core.managepage.Employee.Employee;
-import org.umssdiplo.automationv01.core.managepage.Login.Login;
 import org.umssdiplo.automationv01.core.utils.LoadPage;
 
 public class StepsDefinitionPHPtravel {
 
 
     private Employee employee;
+
+    private Assigment assigment;
 
     @Given("^'Loading' page$")
     public void loading() throws Throwable {
@@ -54,5 +56,21 @@ public class StepsDefinitionPHPtravel {
         employee.clickDeleteEditButton(1,1);
         fillData();
         employee.clickDelEmployee();
+    }
+
+    @Given("^Load Assigment Report$")
+    public void loadAssigmentReport() {
+        assigment=LoadPage.assigment();
+
+    }
+
+    @And("^click 'Menu Assigment'$")
+    public void clickMenuAssigment() {
+        assigment.clickAssigment();
+    }
+
+    @And("^click 'Submenu Report'$")
+    public void clickSubmenuReport() {
+        assigment.clickAssigmentReport();
     }
 }
