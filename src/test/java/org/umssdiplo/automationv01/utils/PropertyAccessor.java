@@ -1,4 +1,4 @@
-package org.umssdiplo.automationv01.core.utils;
+package org.umssdiplo.automationv01.utils;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -8,14 +8,13 @@ import java.util.Properties;
 public class PropertyAccessor {
     private static final String BROWSER = "browser";
     private static final String BASE_URL = "baseurl";
-    private static final String USER_NAME = "username";
+    private static final String USER = "username";
     private static final String PASSWORD = "password";
-    private static final String BASE_URI = "postman.baseuri";
 
-    private static PropertyAccessor PropertyAccessor;
+    private static org.umssdiplo.automationv01.core.utils.PropertyAccessor PropertyAccessor;
     private Properties properties;
 
-    public PropertyAccessor(){
+    private PropertyAccessor(){
         try(FileInputStream fileInputStream = new FileInputStream("gradle.properties")) {
             properties = new Properties();
             properties.load(fileInputStream);
@@ -27,9 +26,9 @@ public class PropertyAccessor {
         }
     }
 
-    public static PropertyAccessor getInstance(){
+    public static org.umssdiplo.automationv01.core.utils.PropertyAccessor getInstance(){
         if(PropertyAccessor == null){
-            PropertyAccessor = new PropertyAccessor();
+            PropertyAccessor = new org.umssdiplo.automationv01.core.utils.PropertyAccessor();
         }
         return PropertyAccessor;
     }
@@ -59,14 +58,10 @@ public class PropertyAccessor {
     }
 
     public String getUser() {
-        return getDataProperty(USER_NAME);
+        return getDataProperty(USER);
     }
 
     public String getPassword() {
         return getDataProperty(PASSWORD);
-    }
-
-    public String getBaseUri() {
-        return getDataProperty(BASE_URI);
     }
 }
