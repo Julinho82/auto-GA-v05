@@ -12,6 +12,7 @@ public class PumaPage extends BasePage {
     public void clickMenHombre(){
 
         menHombre.click();
+
     }
 
 
